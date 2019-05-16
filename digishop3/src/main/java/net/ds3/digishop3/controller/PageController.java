@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import net.ds3.digishop3backend.dao.CategoryDAO;
-import net.ds3.digishop3backend.dto.Category;
+import net.dsb.digishop2backend.dao.CategoryDAO;
+import net.dsb.digishop2backend.dto.Category;
 
 @Controller
 public class PageController {
