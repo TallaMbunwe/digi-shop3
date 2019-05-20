@@ -22,7 +22,7 @@
 		
 		<dependency>
 			<groupId>net.dsb</groupId>
-			<artifactId>digishop2backend</artifactId>
+			<artifactId>digishop3backend</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 

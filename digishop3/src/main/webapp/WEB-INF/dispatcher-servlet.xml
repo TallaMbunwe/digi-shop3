@@ -12,7 +12,8 @@
    	">
 
 	<context:component-scan base-package="net.ds3.digishop3.controller"/>
-	<context:component-scan base-package="net.ds3.digishop3backend.daoimpl"/>
+	<context:component-scan base-package="net.ds3.digishop3backend.daoimpl "/>
+	<context:component-scan base-package="net.ds3.digishop3backend.config "/>
 	
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

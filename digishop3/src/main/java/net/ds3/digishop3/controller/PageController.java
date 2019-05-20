@@ -1,13 +1,17 @@
 package net.ds3.digishop3.controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import net.dsb.digishop2backend.dao.CategoryDAO;
-import net.dsb.digishop2backend.dto.Category;
+import net.ds3.digishop3backend.dao.CategoryDAO;
+import net.ds3.digishop3backend.dto.Category;
+
+
+
 
 @Controller
 public class PageController {
