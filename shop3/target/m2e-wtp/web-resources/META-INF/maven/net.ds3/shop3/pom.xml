@@ -7,7 +7,23 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>shop3 Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  <properties>
+  	<javaee.version>8.0.1</javaee.version>
+  </properties>
+  
   <dependencies>
+  
+  <!-- JAVA EE API -->
+  <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
+<dependency>
+    <groupId>javax</groupId>
+    <artifactId>javaee-api</artifactId>
+    <version>${javaee.version}</version>
+    <scope>provided</scope>
+</dependency>
+  
+  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
