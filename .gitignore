@@ -26,3 +26,6 @@ hs_err_pid*
 /digishop3/target/
 /digishop3backend/target/
 
+/shop3/target/
+/shop3backend/target/
+
