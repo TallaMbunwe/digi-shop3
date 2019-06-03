@@ -6,7 +6,7 @@
 			<div class="col-lg-12">
 				<p>
 					Copyright &copy; Company 2019 - Template by <a
-						href="http://maxoffsky.com/">Maks</a>
+						href="https://digiplusconsulting.com/">DigiPlus</a>
 				</p>
 			</div>
 		</div>
