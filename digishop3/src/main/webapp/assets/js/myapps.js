@@ -20,19 +20,7 @@ $(function() {
 	}
 	
 	// code for jquery dataTable
-	// create a dataset
-	var products = [
-		
-						['1', 'ABC'],
-						['2', 'DFG'],
-						['3', 'RTE'],
-						['4', 'SXC'],
-						['5', 'VDF'],
-						['6', 'YJT'],
-						['7', 'YHJ'],
-						['8', 'KLM'],
-					
-					];
+	
 	
 	var $table = $('#productListTable');
 	
@@ -40,11 +28,59 @@ $(function() {
 	if ($table.length) {
 		//console.log('Inside the table!'); 
 		
+		var jsonUrl = '';
+		if(window.categoryId == ''){
+			jsonUrl = window.contextRoot + '/json/data/all/products';
+		}
+		else {
+			jsonUrl = window.contextRoot + '/json/data/category/'+ window.categoryId +'/products';
+		}
 		$table.DataTable({
 			
 			lengthMenu: [[3,5,10,-1],['3 Records', '5 Records', '10 Records', 'ALL'] ],
 			pageLength:5,
-			data: products
+			ajax: {
+				url: jsonUrl,
+				dataSrc:''
+			},
+			columns: [
+				{
+					data: 'code',
+					mRender: function(data, type, row) {
+						
+						return '<img src="'+window.contextRoot+'/resources/images/'+data+'.jpg" />'
+						
+					}
+				},
+				{
+					data: 'name'
+				},
+				{
+					data: 'brand'
+				},
+				{
+					data: 'unit_Price',
+					mRender: function(data, type, row) {
+						return  + data + 'FCFA'
+					}
+				},
+				{
+					data: 'quantity'
+				},
+				{
+					data: 'id',
+					mRender: function(data, type, row) {
+						
+						var str = '';
+						str += '<a href="'+window.contextRoot+ '/show/'+data+'/product" class= "btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></a> &#160';
+						str += '<a href="'+window.contextRoot+ '/cart/add/'+data+'/product" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span></a>';
+						
+						return str;
+						
+					}
+				}
+				
+			]
 		});
 		
 	}

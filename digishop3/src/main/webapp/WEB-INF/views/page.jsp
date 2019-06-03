@@ -21,6 +21,9 @@
 
 <script>
 	window.menu = '${title}'; 
+	
+	window.contextRoot = '${contextRoot}'; 
+	
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -66,6 +69,14 @@
 				test="${userClickAllProducts == true or userClickCategoryProducts == true }">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
+			
+			<!-- Loads when user clicks Show Product  -->
+			<c:if
+				test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if> 
+			
+			
 
 			<div class="container">
 
@@ -87,6 +98,10 @@
 		
 		<!-- DataTable Plugin -->
 		<script src="${js}/jquery.dataTables.js"></script>
+ 
+ 		<!-- DataTable Bootstrap Script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+ 		
  
  		<!-- Self coded javascript  -->
 		<script src="${js}/myapps.js"></script>

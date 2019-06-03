@@ -25,12 +25,31 @@
 
 							<tr>
 
-								<th>ID</th>
-								<th>Name</th> 
+								<th></th>
+								<th>Name</th>
+								<th>Brand</th>
+								<th>Price</th> 
+								<th>Qty. Available</th>  
+								<th></th>
 
 							</tr>
 
 						</thead>
+						
+						<tfoot>
+
+							<tr>
+
+								<th></th>
+								<th>Name</th>
+								<th>Brand</th>
+								<th>Price</th> 
+								<th>Qty. Available</th>  
+								<th></th>
+
+							</tr>
+
+						</tfoot>
 
 					</table>
 
@@ -40,6 +59,11 @@
 
 
 					<c:if test="${userClickAllProducts == true}">
+					
+						<script>
+							window.categoryId = '';
+						</script>
+						
 						<ol class="breadcrumb">
 
 							<li><a href="${contextRoot}/home"> Home </a></li>
@@ -50,7 +74,10 @@
 
 					<c:if test="${userClickCategoryProducts == true}">
 						<ol class="breadcrumb">
-
+						<script>
+							window.categoryId = '${category.id}';
+						</script>
+						
 							<li><a href="${contextRoot}/home"> Home </a></li>
 							<li class="active">Category</li>
 							<li class="active">${category.name}</li>
