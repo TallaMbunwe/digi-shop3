@@ -18,7 +18,7 @@
 
 	<dependencies>
 	
-		<!-- Link Project to  Backend -->
+		<!-- Link Project to Backend -->
 		
 		<dependency>
 			<groupId>net.dsb</groupId>
