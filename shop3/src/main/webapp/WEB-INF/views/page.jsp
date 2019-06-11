@@ -34,7 +34,7 @@
  
 
 <!-- Add custom CSS here -->
-<link href="${css}/myapp.css" rel="stylesheet">
+<link href="${css}/myapps.css" rel="stylesheet">
 
 </head>
 
@@ -56,7 +56,7 @@
 				<%@include file="about.jsp"%>
 			</c:if>
 
-			<!-- Loads when user clicks contact -->
+			<!-- Load when user clicks contact -->
 			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
